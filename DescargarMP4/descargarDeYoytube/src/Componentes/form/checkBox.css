@@ -1,0 +1,70 @@
+.formatContainer{
+    display: flex;
+    flex-direction: column;
+}
+input[type="radio"] {
+  display: none; /* oculta el radio original */
+}
+
+label {
+  position: relative;
+  padding-left: 25px;
+  cursor: pointer;
+  color: white;
+  margin: 8px;
+}
+
+
+/* círculo vacío */
+label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 50%;
+}
+
+span::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 50%;
+  transform: translate(60%, -60%);
+  opacity: 0;
+}
+
+
+input[type="radio"]:checked + span::before {
+  background-color: rgb(159, 240, 36);
+  border-color: rgb(159, 240, 36);
+}
+
+/* Cambia el color del texto cuando el radio está seleccionado */
+input[type="radio"]:checked + span {
+  color: rgb(159, 240, 36);
+}
+input[type="radio"]:checked + label::before {
+  border: 2px solid rgb(159, 240, 36);
+}
+span{
+    margin: 15px;
+}/* Cambia el color del texto cuando el radio está seleccionado */
+input[type="radio"]:checked + span::before {
+  opacity: 1; /* visible solo cuando está checked */
+  background-color: rgb(159, 240, 36);
+  border-color: rgb(159, 240, 36);
+}
+/*input[type="radio"]:checked + label::before { no funciona porque el label no está después del input
+  border: 2px solid rgb(159, 240, 36);
+}*/
+label:has(input[type="radio"]:checked)::before {
+  border-color: rgb(159, 240, 36);
+  
+}

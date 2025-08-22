@@ -1,0 +1,11 @@
+.lineaHorizontal{
+    height: 0;
+    border: 1px solid white;
+    margin: 30px;
+}
+
+.lineaVertical{
+    width: 0;
+    border: 1px solid white;
+    margin: 0 30px;
+}
