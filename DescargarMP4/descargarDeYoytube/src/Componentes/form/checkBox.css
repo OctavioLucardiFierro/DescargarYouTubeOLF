@@ -68,3 +68,9 @@ label:has(input[type="radio"]:checked)::before {
   border-color: rgb(159, 240, 36);
   
 }
+
+@media(max-width:340px){
+  span{
+    font-size: 13px;
+  }
+}

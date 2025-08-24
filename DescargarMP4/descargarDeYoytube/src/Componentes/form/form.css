@@ -3,6 +3,7 @@
     word-spacing: 5px;
     text-align: center;
     font-family: "Anton", sans-serif;
+    
 }
 
 .formCont{
@@ -53,5 +54,9 @@ button:hover{
     }
     button{
         width: 80%;
+    }
+    .main-title{
+        font-size: 60px;
+        word-spacing: 3px;
     }
 }
